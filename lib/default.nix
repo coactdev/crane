@@ -23,6 +23,7 @@ in
   cargoFmt = callPackage ./cargoFmt.nix { };
   cargoHelperFunctionsHook = callPackage ./setupHooks/cargoHelperFunctions.nix { };
   cargoLlvmCov = callPackage ./cargoLlvmCov.nix { };
+  cargoLambda = callPackage ./cargoLambda.nix { };
   cargoNextest = callPackage ./cargoNextest.nix { };
   cargoTarpaulin = callPackage ./cargoTarpaulin.nix { };
   cargoTest = callPackage ./cargoTest.nix { };
