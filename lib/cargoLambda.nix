@@ -4,7 +4,7 @@
 }:
 
 { cmd ? "build"
-, cargoLamdaxtraArgs ? ""
+, cargoLambdaExtraArgs ? ""
 , cargoExtraArgs ? ""
 , src
 , ...
@@ -16,7 +16,7 @@ let
   ];
 in
 mkCargoDerivation (args // {
-  buildPhaseCargoCommand = "cargo lambda ${cmd} ${cargoExtraArgs} ${cargoAuditExtraArgs}";
+  buildPhaseCargoCommand = "cargo lambda ${cmd} ${cargoExtraArgs} ${cargoLambdaExtraArgs}";
 
   pnameSuffix = "-lambda";
 
