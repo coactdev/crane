@@ -18,7 +18,7 @@ let
 in
 mkCargoDerivation (args // {
   inherit cargoArtifacts;
-  buildPhaseCargoCommand = "CARGO_ZIGBUILD_CACHE_DIR=${cargoZigBuildCacheDir} cargoWithProfile lambda ${cmd} ${cargoExtraArgs} ${cargoLambdaExtraArgs}";
+  buildPhaseCargoCommand = "CARGO_ZIGBUILD_CACHE_DIR=${cargoZigBuildCacheDir} cargo lambda ${cmd} ${cargoExtraArgs} ${cargoLambdaExtraArgs}";
 
   pnameSuffix = "-lambda";
 
