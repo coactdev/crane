@@ -1,12 +1,10 @@
 { cargo-lambda
-, lib
 , mkCargoDerivation
 }:
 
 { cmd ? "build"
 , cargoLambdaExtraArgs ? ""
 , cargoExtraArgs ? ""
-, src
 , ...
 }@origArgs:
 let
