@@ -9,6 +9,7 @@
 }@origArgs:
 let
   args = builtins.removeAttrs origArgs [
+    "cmd"
     "cargoLambdaExtraArgs"
     "cargoExtraArgs"
   ];
