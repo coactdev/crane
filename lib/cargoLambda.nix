@@ -6,7 +6,7 @@
 , cmd ? "build"
 , cargoLambdaExtraArgs ? ""
 , cargoExtraArgs ? ""
-, cargoZigBuildCacheDir ? "/build/CACHE"
+, cargoZigBuildCacheDir ? "/tmp/CACHE"
 , ...
 }@origArgs:
 let
