@@ -26,5 +26,5 @@ mkCargoDerivation (args // {
   pname = args.pname or "crate";
   version = args.version or "0.0.0";
 
-  nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ cargo-lamda ];
+  nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ cargo-lambda ];
 })
