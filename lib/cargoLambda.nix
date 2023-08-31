@@ -7,6 +7,7 @@
 , cargoLambdaExtraArgs ? ""
 , cargoExtraArgs ? ""
 , cargoZigBuildCacheDir ? "$TMPDIR/CACHE"
+, preCargoArgs ? ""
 , ...
 }@origArgs:
 let
@@ -14,11 +15,12 @@ let
     "cmd"
     "cargoLambdaExtraArgs"
     "cargoExtraArgs"
+    "preCargoArgs"
   ];
 in
 mkCargoDerivation (args // {
   inherit cargoArtifacts;
-  buildPhaseCargoCommand = "CARGO_ZIGBUILD_CACHE_DIR=${cargoZigBuildCacheDir} cargo ${cargoExtraArgs} lambda ${cmd} ${cargoLambdaExtraArgs}";
+  buildPhaseCargoCommand = "CARGO_ZIGBUILD_CACHE_DIR=${cargoZigBuildCacheDir} ${preCargoArgs} cargo ${cargoExtraArgs} lambda ${cmd} ${cargoLambdaExtraArgs}";
 
   pnameSuffix = "-lambda";
 
